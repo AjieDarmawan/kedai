@@ -1,0 +1,490 @@
+
+<!--content-->
+<div class="content">
+	<div class="col-md-3 skil">
+		<div class="continue">Detail Pembelian</div>
+		<!-- <div class="col-md-12" style="margin-bottom: 1em">
+			<div class="radio-inline"><label><input type="radio" name="status" id="member"> Member</label></div>
+			<div class="radio-inline"><label><input type="radio" name="status" id="nonmember"> Non Member</label></div>
+		</div> -->
+		<form method="post" id="transaksi">
+			<div class="col-md-12" style="margin-bottom: 1em">
+				<!-- <input type="text" class="form-control" name="rfid_card" placeholder="Barcode Scanner" style="" id="barcode" onkeyup="getmember(this.value)"> -->
+			</div>
+			<div class="clearfix"></div>
+			<div class="price-details">
+				
+					<table class="table" style="font-size: 12px;">
+					    <thead>
+							<tr>
+								<th style="width:10px"></th>
+								<th>Barang</th>
+								<th>Qty</th>
+								<th>Price</th>
+							</tr>
+					    </thead>
+					    <tbody id="content-table">
+							   
+					     
+					    </tbody>
+					    <tfoot style="font-size: 15px; font-weight: bold;" id="footer-table">
+							<tr>
+								<td colspan='2' class='text-right' style='font-size: 15px'>Total</td>
+								<td align='center' id='total-qty'><input type="hidden" name="itotalisi" class="itotalisi" value="0"></td>
+								<td id='total-harga'>Rp. </td>
+							</tr>
+					    </tfoot>
+					 </table>
+				
+					<div style="background: #f0f0f0">
+						<h3>Pembayaran</h3>
+						<span>Total</span>
+						<span class="total1">Rp. 0</span>
+						<!-- <span>Discount</span>
+						<span class="diskon">---</span>
+						<span>Discount Amount</span>
+						<span class="diskonamount">---</span> -->
+						<!-- 
+						<span>&nbsp;</span>
+						<span>&nbsp;</span> -->
+						
+						<!-- <span>&nbsp;</span>
+						<span>&nbsp;</span> -->
+						<!-- <span>Delivery Charges</span>
+						<span class="total1">150.00</span> -->
+						<div class="clearfix"></div>				 
+					</div>
+					<table>
+						<tr>
+							<td><h4>GRANT TOTAL</h4></td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td style="font-size: 1.5em"><span id="granttotal">Rp. 0</span></td>
+						</tr>
+						<tr>
+							<!-- <span class="bayar">Bayar</span>
+						<span class="bayar1"><input type="text" id="ibayar" name="bayar" class="form-input"></span> -->
+
+							<td><h4>Bayar</h4></td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td class="bayar1" ><input type="text" id="ibayar" name="bayar" class="form-input"></td>
+						</tr>
+						<tr>
+							<!-- <span class="kembali">Kembali</span>
+						<span class="kembali1"><input type="text" id="ikembali" name="kembali" readonly="readonly"></span> -->
+
+							<td><h4>Kembali</h4></td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td class="kembali1" ><input type="text" id="ikembali" name="kembali" readonly="readonly"></td>
+						</tr>
+					</table>
+					<div class="clearfix"> </div>
+					<!-- <ul class="total_price">
+						<li class="last_price"> <h4>GRANT TOTAL</h4></li>	
+						<li style="font-size: 1.5em"><span id="granttotal">Rp. 0</span></li>
+						<div class="clearfix"> </div>
+					</ul> -->
+			</div>
+
+			<div class="col-md-6 text-center" style="margin-top: 2em">
+		 		<button type="button" class="btn btn-danger col-md-12" id="batal">Batal</button>
+		 	</div>
+		 	<div class="col-md-6 text-center" style="margin-top: 2em">
+		 		<button type="button" class="btn btn-success col-md-12" id="bayar">Bayar</button>
+		 	</div>
+	 	</form>
+		
+	 	
+	 	<div class="clearfix"></div>
+	</div>
+
+	<div class="col-md-8 mid-content-top">
+		<div class="check">	 
+			
+		 	<div class="col-md-12 cart-items">
+				<div id="tabs" class="tabs">
+					<!-- <div class="graph"> -->
+						<nav>
+							<ul>
+								<li class="tab-current"><a href="#section-1" class="icon-shop"><span>Semua</span></a></li>
+								<li><a href="#section-2" class="icon-cup"><span>Makanan Utama</span></a></li>
+								<li><a href="#section-3" class="icon-food"><span>Sarapan</span></a></li>
+								<li><a href="#section-4" class="icon-food"><span>Minuman Hangat Sehat</span></a></li>
+								<li><a href="#section-5" class="icon-food"><span>Jus Sehat</span></a></li>
+							</ul>
+						</nav>
+						<div class="content tab">
+							<section id="section-1" class="content-current">
+								<div class="grids_of_4">
+								<?php foreach($semua as $b){?>
+									
+										<div class="grid1_of_4">
+											<div class="content_box">
+												<a href="details.html">
+										   	   		<img src="<?php echo base_url($b->gambar)?>" class="img-responsive" alt="" style="width: 250px; height: 180px">
+										   	   	</a>
+											    <h4 style="height:20px !important"><a href="details.html"><?php echo $b->nama_produk;?></a></h4>
+											    <!--  <p>It is a long established fact that</p> -->
+												<div class="grid_1 simpleCart_shelfItem">
+													<div class="item_add"><span class="item_price"><h6>Rp. <?php echo number_format($b->harga_jual);?></h6></span></div>
+													<div class="item_add"><span class="item_price"><button id="<?php echo $b->kode_produk;?>" onclick="hitung(this.id, '<?php echo $b->nama_produk;?>','<?php echo $b->harga_jual;?>','<?php echo $b->id_produk;?>')"><i class="fa fa-shopping-cart"></i> Beli</button></span></div>
+													<input type="hidden" id="<?php echo $b->kode_produk;?>count" value="0"/>
+												 </div>
+										   	</div>
+										</div>
+									
+								<?php } ?>
+								</div>
+
+							</section>
+								
+							<section id="section-2">
+								<div class="grids_of_4">
+								<?php foreach($mu as $m){?>
+									
+										<div class="grid1_of_4">
+											<div class="content_box">
+												<a href="details.html">
+										   	   		<img src="<?php echo base_url($m->gambar)?>" class="img-responsive" alt="" style="width: 250px; height: 180px">
+										   	   	</a>
+											    <h4 style="margin-bottom:10px !important"><a href="details.html"><?php echo $m->nama_produk;?></a></h4>
+											    <!--  <p>It is a long established fact that</p> -->
+												<div class="grid_1 simpleCart_shelfItem">
+													<div class="item_add"><span class="item_price"><h6>Rp. <?php echo number_format($m->harga_jual);?></h6></span></div>
+													<div class="item_add"><span class="item_price"><a href="#">Beli</a></span></div>
+												 </div>
+										   	</div>
+										</div>
+									
+								<?php } ?>
+								</div>
+							</section>
+
+							<section id="section-3">
+								<div class="grids_of_4">
+								<?php foreach($srp as $s){?>
+									
+										<div class="grid1_of_4">
+											<div class="content_box">
+												<a href="details.html">
+										   	   		<img src="<?php echo base_url($s->gambar)?>" class="img-responsive" alt="" style="width: 250px; height: 180px">
+										   	   	</a>
+											    <h4 style="margin-bottom:10px !important"><a href="details.html"><?php echo $s->nama_produk;?></a></h4>
+											    <!--  <p>It is a long established fact that</p> -->
+												<div class="grid_1 simpleCart_shelfItem">
+													<div class="item_add"><span class="item_price"><h6>Rp. <?php echo number_format($s->harga_jual);?></h6></span></div>
+													<div class="item_add"><span class="item_price"><a href="#">Beli</a></span></div>
+												 </div>
+										   	</div>
+										</div>
+									
+								<?php } ?>
+								</div>
+							</section>
+
+							<section id="section-4">
+								<div class="grids_of_4">
+								<?php foreach($mhs as $mh){?>
+									
+										<div class="grid1_of_4">
+											<div class="content_box">
+												<a href="details.html">
+										   	   		<img src="<?php echo base_url($mh->gambar)?>" class="img-responsive" alt="" style="width: 250px; height: 180px">
+										   	   	</a>
+											    <h4 style="margin-bottom:10px !important"><a href="details.html"><?php echo $mh->nama_produk;?></a></h4>
+											    <!--  <p>It is a long established fact that</p> -->
+												<div class="grid_1 simpleCart_shelfItem">
+													<div class="item_add"><span class="item_price"><h6>Rp. <?php echo number_format($mh->harga_jual);?></h6></span></div>
+													<div class="item_add"><span class="item_price"><a href="#">Beli</a></span></div>
+												 </div>
+										   	</div>
+										</div>
+									
+								<?php } ?>
+								</div>
+							</section>
+
+							<section id="section-5">
+								<div class="grids_of_4">
+								<?php foreach($jus_sehat as $jus){?>
+									
+										<div class="grid1_of_4">
+											<div class="content_box">
+												<a href="details.html">
+										   	   		<img src="<?php echo base_url($jus->gambar)?>" class="img-responsive" alt="" style="width: 250px; height: 180px">
+										   	   	</a>
+											    <h4 style="margin-bottom:10px !important"><a href="details.html"><?php echo $jus->nama_produk;?></a></h4>
+											    <!--  <p>It is a long established fact that</p> -->
+												<div class="grid_1 simpleCart_shelfItem">
+													<div class="item_add"><span class="item_price"><h6>Rp. <?php echo number_format($jus->harga_jual);?></h6></span></div>
+													<div class="item_add"><span class="item_price"><a href="#">Beli</a></span></div>
+												 </div>
+										   	</div>
+										</div>
+									
+								<?php } ?>
+								</div>
+							</section>
+
+						</div><!-- /content -->
+					<!-- </div> -->
+				</div>
+				<script src="<?php echo base_url('assets/gretong/js/cbpFWTabs.js');?>"></script>
+				<script>
+					new CBPFWTabs( document.getElementById( 'tabs' ) );
+				</script>
+				</div>
+			
+
+			<div class="clearfix"> </div>
+	 	</div>
+
+			<div class="clearfix"></div>
+	</div>
+
+
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!--content-->
+
+<script type="text/javascript">
+	$("document").ready(function(){
+		$("#ibayar").keyup(function(){
+            /*if ($("#grandTotal").html().replace(/,/g, '')*1>0) {
+                $("#kembalian").html(numeral($("#txtBayar").val().replace(/,/g, '')*1-$("#grandTotal").html().replace(/,/g, '')*1).format('0,0'));
+            }*/
+
+            var split = $("#granttotal").html().split(" ");
+            var gt = split[1];
+            $("#ibayar").val(numeral($("#ibayar").val()).format('0,0'));
+            $("#ikembali").val(numeral($("#ibayar").val().replace(/,/g, '')*1 - gt.replace(/,/g, '')*1).format('0,0'));
+        });
+
+        $("#bayar").click(function(){
+        	$.ajax({
+		        type : "POST",
+		        url  : "<?php echo base_url('app/transaksi');?>",
+		        data : $("#transaksi").serialize(),
+		        success:function(data){
+		        	alert(data);
+		        	$('#myModal').modal('show');
+		        },
+		        error: function() {
+        			alert('Terjadi Kesalahan');
+    			}
+      		});
+      		//location.reload();
+        });
+
+		/*$('#member').click(function() {
+	 		$("#barcode").show();
+	 		$(".bayar").hide();
+	 		$(".bayar1").hide();
+	 		$(".kembali").hide();
+	 		$(".kembali1").hide();
+		});
+		$('#nonmember').click(function() {
+	 		$("#barcode").hide();
+	 		$(".bayar").show();
+	 		$(".bayar1").show();
+	 		$(".kembali").show();
+	 		$(".kembali1").show();
+		});*/
+	});
+
+	var simpantemp = new Array();
+	
+
+	/*function getmember(rfid_number){
+		$.post('<?php echo base_url("app/getmember/");?>'+rfid_number,
+			{},
+			function(response, status){
+                if(status=="success"){
+                    //alert(response);
+                    if(response=="Data RFID Tidak Ditemukan"){
+                    	$(".diskon").html("---");
+                    	alert(response);
+                    }else{
+	                    var split = response.split("=");
+	                    //1-faizal-jakarta-laki-laki-Silver-5-0008924558-100000
+	                    var diskon = split[5];
+	                    
+	                    //console.log("total harga "+$("#itotalharga").val());
+	                    //console.log("diskon "+split[5]);
+	                    if($("#barcode").val()=="" || $("#barcode").val()==null){
+	                    	$(".diskon").html("---");
+	                    }else{
+	                    	$(".diskon").html(diskon+"%");
+	                    }
+	                }
+                    total();
+                }else{
+
+                }
+            } 
+
+		)
+
+	}*/
+
+	function refreshgranttotal(){
+		//alert("refreshgranttotal");
+		/*var split = $(".diskon").html().split("%");
+		var diskon = split[0];*/
+		//console.log("diskon "+diskon);
+		var granttotal = $("#itotalharga").val();
+		//console.log(totalharga);
+
+		//var diskonamount = totalharga * diskon / 100;
+		//var granttotal = totalharga - diskonamount;
+		//console.log(granttotal);
+
+		if(granttotal==""||granttotal==null){
+			//$("#granttotal").html("Rp. "+number_format(granttotal));
+		}else{
+			$("#granttotal").html("Rp. "+number_format(granttotal));
+		}
+		
+	}
+
+	function editqty(value, harga, idtd){
+		//console.log("editqty");
+		//console.log(value);
+		//console.log(harga);
+		var kali = parseInt(value * harga);
+		//console.log(kali);
+		$("#" + idtd).html("Rp. "+number_format(kali)+" <input type='hidden' value='"+kali+"' name='harga[]' class='iharga'>");
+		/*$("#" + idtd + " .iharga").html("dfgdfg <input type='text' value='"+kali+"' name='harga[]' class='iharga'>Rp. "+number_format(kali));*/
+		total();
+		
+	}
+
+	function hapus(id, idcount){
+		//alert(id);
+		//alert(idcount);
+		$("#" + id).remove();
+		$(idcount).val(0);
+		total();
+	}
+
+	function hitung(id, nama_produk, harga, id_produk){
+
+		//alert(id);
+		var jml = parseInt($("#" + id + "count").val());
+		var ttlqty = parseInt($(".itotalisi").val());
+
+
+		var tot = jml + 1;
+
+
+		//console.log("total : "+tot);
+		
+		$("#" + id + "count").val(tot);
+		var harga_jual = parseInt($("#" + id + "count").val()) * harga;
+		//alert($("#" + id + "count").val());
+
+		var idcount = "#" + id + "count";
+
+		if($("#" + id + "count").val()==1){
+			$("#content-table").append(
+				"<tr id='" + id + "body'>"+
+					"<td><a onclick=hapus(this.id,'"+idcount+"')  id='"+ id +"body'><i class='fa fa-trash-o' style='font-size:15px'></i></a></td>"+
+					"<td><input type='hidden' name='id_produk[]' value='"+id_produk+"'>"+nama_produk+"</td>"+
+					"<td align='center'><input type='text' value='"+tot+"' size='1' name='qty[]' class='iqty' onkeyup=editqty(this.value,'"+harga+"','tdharga"+id+"') ></td>"+
+					"<td id='tdharga"+id+"'> Rp. "+number_format(harga)+" <input type='hidden' value='"+harga+"' name='harga[]' class='iharga'></td>"+
+				"</tr>"
+			);
+
+		}else{
+
+			$("#" + id + "body").html(
+				"<td><a onclick=hapus(this.id,'"+idcount+"')  id='"+ id +"body'><i class='fa fa-trash-o' style='font-size:15px'></i></a></td>"+
+				"<td><input type='hidden' name='id_produk[]' value='"+id_produk+"'>"+nama_produk+"</td>"+
+				"<td align='center'><input type='text' value='"+tot+"' size='1' name='qty[]' class='iqty' onkeyup=editqty(this.value,'"+harga+"','tdharga"+id+"')></td>"+
+				"<td id='tdharga"+id+"'> Rp. "+number_format(harga_jual)+" <input type='hidden' value='"+harga_jual+"' name='harga[]' class='iharga'></td>"
+			);
+		}
+
+		$(".itotalisi").val(tot);
+
+		
+		total();
+
+		//alert($('.iqty').val());
+
+		//$("#" + id + "stat").html("diklik: " + tot + " kali");
+
+	}
+
+	function number_format(nStr){
+		nStr += '';
+		x = nStr.split('.');
+		x1 = x[0];
+		x2 = x.length > 1 ? '.' + x[1] : '';
+		var rgx = /(\d+)(\d{3})/;
+		while (rgx.test(x1)) {
+			x1 = x1.replace(rgx, '$1' + ',' + '$2');
+		}
+		return x1 + x2;
+	}
+
+
+	function total(){
+		//console.log("masuk kuy");
+		var a = 0;
+		var b = 0;
+
+		/*var split = $(".diskon").html().split("%");
+		var diskon = split[0];
+*/
+		$('td .iqty').each(function(){
+			//alert($(this).val());
+			a+=parseInt($(this).val());
+			//console.log($(this).val());
+			 
+		});
+		$('td .iharga').each(function(){
+			//alert($(this).val());
+			b+=parseInt($(this).val());
+			//console.log($(this).val());
+			 
+		});
+		$('#total-qty').html(a);
+		$('.itotalisii').val(a);
+
+		//$('#total-harga').html("Rp. "+number_format(b)+"<input type='hidden' name='total-harga' id='itotalharga' value='"+b+"'");
+		$('#total-harga').html("Rp. "+number_format(b)+"<input type='hidden' value='"+b+"' name='itotalharga' id='itotalharga'>");
+		$(".total1").html("Rp. "+number_format(b));
+
+		/*if($(".diskon").html()==="---"){
+			$(".diskonamount").html("---");
+		}else{
+			$(".diskonamount").html("Rp. "+number_format($("#itotalharga").val()*diskon/100));
+		}*/
+		
+
+		refreshgranttotal();
+	}
+
+	
+
+	
+</script>

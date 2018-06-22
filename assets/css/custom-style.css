@@ -1,0 +1,449 @@
+.bujt-persiapan{
+  background: url('../image/per.png') no-repeat;
+  color: white;
+  padding-top: 6px;
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.bujt-konstruksi{
+  background: url('../image/kons.png') no-repeat;
+  color: white;
+  padding-top: 6px;
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.bujt-operasi{
+  background: url('../image/op.png') no-repeat;
+  color: white;
+  padding-top: 6px;
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/*lingkang*/
+.lingkaran-biru {
+ background-color:  #eaeaff;
+ border: 5px solid #00bfff;
+ color: black;
+ padding-top: 18px ;
+ font-size: 17px;
+font-weight: bold;
+ 
+ height: 70px;
+ width: 70px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+}
+.lingkaran-merah {
+ background-color:  #eaeaff;
+ border: 5px solid #dc143c;
+ color: black;
+ padding-top: 18px ;
+ font-size: 17px;
+font-weight: bold;
+ height: 70px;
+ width: 70px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+}
+.lingkaran-orange{
+ background-color:  #eaeaff;
+ border: 5px solid #ffa500 ;
+ color: black;
+ padding-top: 18px ;
+ font-size: 17px;
+font-weight: bold;
+ height: 70px;
+ width: 70px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+}
+.total-biru {
+ background-color:  #00bfff;
+ border: 5px solid #00bfff ;
+ /*border: 8px solid #ffa500 ;*/
+ color: white;
+ padding-top: 22px ;
+ font-size: 17px;
+font-weight: bold;
+ height: 80px;
+ width: 80px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+}
+
+.total-merah {
+ background-color: #dc143c;
+ border: 8px solid #dc143c;
+ color: white;
+ margin-left: 10px;
+ padding-top: 18px ;
+ font-size: 17px;
+font-weight: bold;
+ height: 80px;
+ width: 80px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+}
+
+
+.total-orange {
+ background-color:  #ffa500;
+ border: 8px solid #ffa500;
+ color: white;
+ margin-left: 10px;
+ padding-top: 18px ;
+ font-size: 17px;
+font-weight: bold;
+ height: 80px;
+ width: 80px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+}
+.lingkaran-kecil-orange {
+ background-color:  #ffa500;
+ border: 5px solid #ffa500;
+ text-align: center;
+ margin-top: 1px;
+ color: white;
+ font-size: 17px;
+font-weight: bold;
+ height: 30px;
+ width: 30px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+ position: relative;
+z-index:9999;
+}
+.border-orange{
+  background-color: #f7d699;
+  border-bottom: 2px solid #ffa500;
+  width:110px;
+  margin-left:12px;
+  margin-top:-20px;
+  
+}
+.border-miring-orange{
+  color: transparent;
+  background-color: #f7d699;
+  width: 10px;
+  border-right: 2px solid #ffa500;
+  margin-left:116px;
+  margin-top:-20px;
+  -moz-transform:rotate(20deg);
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(20deg); /* Standard syntax */
+  
+  -webkit-border-radius: 75px;
+  -webkit-border-radius: 75px;
+}
+
+.lingkaran-kecil-merah {
+ background-color:  #dc143c;
+ border: 5px solid #dc143c;
+ text-align: center;
+ margin-top: 1px;
+ color: white;
+ font-size: 17px;
+font-weight: bold;
+ height: 30px;
+ width: 30px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+ position: relative;
+z-index:9999;
+}
+.border-merah{
+  background-color: #f3c8d0;
+  border-bottom: 2px solid #dc143c;
+  width:110px;
+  margin-left:12px;
+  margin-top:-20px;
+  
+}
+.border-miring-merah{
+  color: transparent;
+  background-color: #f3c8d0;
+  width: 10px;
+  border-right: 2px solid #dc143c;
+  margin-left:116px;
+  margin-top:-20px;
+  -moz-transform:rotate(20deg);
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(20deg); /* Standard syntax */
+  
+  -webkit-border-radius: 75px;
+  -webkit-border-radius: 75px;
+}
+
+.lingkaran-kecil-hijau {
+ background-color:  #009688;
+ border: 5px solid #009688;
+ text-align: center;
+ margin-top: 1px;
+ color: white;
+ font-size: 17px;
+font-weight: bold;
+ height: 30px;
+ width: 30px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+ position: relative;
+z-index:9;
+}
+.border-hijau{
+  background-color: #8cccc6;
+  border-bottom: 2px solid #009688;
+  width:110px;
+  margin-left:12px;
+  margin-top:-20px;
+  
+}
+.border-miring-hijau{
+  color: transparent;
+  background-color: #8cccc6;
+  width: 10px;
+  border-right: 2px solid #009688;
+  margin-left:116px;
+  margin-top:-20px;
+  -moz-transform:rotate(20deg);
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(20deg); /* Standard syntax */
+  
+  -webkit-border-radius: 75px;
+  -webkit-border-radius: 75px;
+}
+
+.lingkaran-kecil-orange-dis {
+ background-color:  #ffa500;
+ border: 5px solid #ffa500;
+ margin-top: 5px;
+ color: white;
+ font-size: 17px;
+font-weight: bold;
+ height: 30px;
+ width: 30px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+display: inline;
+}
+.border-orange-dis{
+  border-bottom: 2px solid #ffa500;
+  width:100px;
+  margin-left:11px;
+  display: inline;
+}
+.border-kanan-dis{
+  background-color: red;
+  width: 10px;
+  border-right: 2px solid #ffa500;
+  margin-left:110px;
+  margin-top: 20px;
+  -moz-transform:rotate(20deg);
+  -moz-transform: rotate(20deg); /* IE 9 */
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(20deg); /* Standard syntax */
+  display: inline;
+}
+
+
+/*segitiga*/
+.box-jumlah-ruas{
+ background-color:  #00b9d0;
+ border: 5px solid #00b9d0;
+ text-align: center;
+ margin-left: 5px;
+ padding: 3px;
+ color: white;
+ font-size: 17px;
+font-weight: bold;
+ width: auto;
+ box-shadow: 10px 10px 10px #ccc;
+ -moz-border-radius:5px 5px 5px 5px;
+ -webkit-border-radius: 5px 5px 5px 5px;
+}
+.box-jumlah-ruas-kiri{
+ background-color: #00b9d0;
+ border: 5px solid #00b9d0;
+ text-align: center;
+ margin:5px 5px 0px 5px;
+ color: white;
+ font-size: 17px;
+font-weight: bold;
+ height: 30px;
+ width: auto;
+ -moz-border-radius:5px 5px 5px 0px;
+ -webkit-border-radius: 5px 5px 5px 0px;
+}
+
+.box-jumlah-ruas-kanan{
+ background-color:  #00b9d0;
+ border: 5px solid #00b9d0;
+ text-align: center;
+  margin:0px 2px 0px 2px;
+ color: white;
+ font-size: 17px;
+font-weight: bold;
+ height: 30px;
+ width: auto;
+ -moz-border-radius:5px 5px 0px 5px;
+ -webkit-border-radius: 5px 5px 0px 5px;
+}
+.border-kiri{
+  background-color: #eaeaff;
+  border-bottom: 2px solid #00b9d0;
+  border-left: 2px solid #00b9d0;
+  color: black;
+ font-weight: bold;
+  padding: 5px;
+  margin:0px 5px 0px 5px;
+}
+.border-kanan{
+  background-color: #eaeaff;
+  border-bottom: 2px solid #00b9d0;
+  border-right: 2px solid #00b9d0;
+  text-align: right;
+  color: black;
+  padding: 5px;
+  margin:0px 2px 0px 2px
+}
+
+.border-panjang{
+  background-color: transparent;
+  border-bottom: 2px solid #dc143c;
+  width:110px;
+  height: 30px;
+  position: absolute;
+  padding-top: 5px;
+}
+.kotak-panjang {
+  background-color: #f3c8d0;
+ border-top: 2px solid #dc143c;
+ border-right: 2px solid #dc143c;
+ border-bottom: 2px solid #dc143c;
+ text-align: center;
+ padding-top: 3px;
+ margin-top: -30px;
+ color: black;
+ font-size: 12px;
+font-weight: bold;
+ height: 30px;
+ width: auto;
+ margin-left:109px;
+ 
+}
+
+.border-miring-panjang{
+  color: transparent;
+  background-color: #f3c8d0;
+  width: 8px;
+  border-left: 2px solid #dc143c;
+  margin-left:105px;
+  height: 30px;
+  -moz-transform:rotate(20deg);
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(20deg); /* Standard syntax */
+  -moz-border-radius:5px 5px 5px 0px;
+  -webkit-border-radius: 0px 8px 6px 0px;
+  position: relative;
+  z-index:9;
+
+}
+
+.border-panjang-operasi{
+  background-color: transparent;
+  border-bottom: 2px solid #009688;
+  width:110px;
+   height: 30px;
+  position: absolute;
+  padding-top: 5px;
+
+}
+.kotak-panjang-operasi {
+  background-color: #8cccc6;
+ border-top: 2px solid #009688;
+ border-right: 2px solid #009688;
+ border-bottom: 2px solid #009688;
+ text-align: center;
+ padding-top: 3px;
+ margin-top: -30px;
+ color: black;
+ font-size: 12px;
+font-weight: bold;
+ height: 30px;
+ width: auto;
+ margin-left:109px;
+ 
+}
+.border-miring-panjang-operasi{
+  color: transparent;
+  background-color: #8cccc6;
+  width: 8px;
+  border-left: 2px solid #009688;
+  margin-left:105px;
+  height: 30px;
+  -moz-transform:rotate(20deg);
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(20deg); /* Standard syntax */
+  -moz-border-radius:5px 5px 5px 0px;
+  -webkit-border-radius: 0px 8px 8px 0px;
+  position: relative;
+  z-index:9;
+
+}
+
+.border-panjang-konstruksi{
+  background-color: transparent;
+  border-bottom: 2px solid #ffa500;
+  width:110px;
+  height: 30px;
+  position: absolute;
+  padding-top: 5px;
+}
+.kotak-panjang-konstruksi {
+  background-color: #f7d699;
+ border-top: 2px solid #ffa500;
+ border-right: 2px solid #ffa500;
+ border-bottom: 2px solid #ffa500;
+ text-align: center;
+ padding-top: 3px;
+ margin-top: -30px;
+ color: black;
+ font-size: 12px;
+font-weight: bold;
+ height: 30px;
+ width: auto;
+ margin-left:109px;
+ 
+}
+
+.border-miring-panjang-konstruksi{
+  color: transparent;
+  background-color: #f7d699;
+  width: 8px;
+  border-left: 2px solid #ffa500;
+  margin-left:105px;
+  height: 30px;
+  -moz-transform:rotate(20deg);
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(20deg); /* Standard syntax */
+  -moz-border-radius:5px 5px 5px 0px;
+  -webkit-border-radius: 0px 8px 6px 0px;
+  position: relative;
+  z-index:9;
+
+}
+
