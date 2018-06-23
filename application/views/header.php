@@ -294,7 +294,7 @@
                           <?php
                               echo"<li class='".$menu_harga."' >".anchor('Produk',"<i class='icon-double-angle-right'></i>Menu Produk")."</li>
 
-                                  <li class='".$Harga."' >".anchor('Harga',"<i class='icon-double-angle-right'></i>Produk")."</li>";
+                                  <li class='".$Harga."' >".anchor('Harga',"<i class='icon-double-angle-right'></i>Setting Harga")."</li>";
                           ?>
                       </ul>
                   </li>

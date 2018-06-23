@@ -189,7 +189,12 @@
 										<div class="grid1_of_4">
 											<div class="content_box">
 												<a href="details.html">
-										   	   		<img src="<?php echo base_url($b->gambar)?>" class="img-responsive" alt="" style="width: 250px; height: 180px">
+
+							
+							<?php
+                                $i = base_url('file_uploads/makanan/'.$b->gambar.'');
+                            ?>
+										   	   		<img src="<?php echo $i;?>" class="img-responsive" alt="" style="width: 250px; height: 180px">
 										   	   	</a>
 											    <h4 style="height:20px !important"><a href="details.html"><?php echo $b->nama_produk;?></a></h4>
 											    <!--  <p>It is a long established fact that</p> -->

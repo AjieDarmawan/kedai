@@ -14,9 +14,9 @@ class User extends CI_Controller
     
     public function index()
     {
-        // $cek=$this->session->userdata('logged_in_bpjt');
-        // if(!empty($cek))
-        // {
+        $cek=$this->session->userdata('logged_in');
+        if(!empty($cek))
+        {
             $user = $this->M_user->get_all();
 
             $data = array(
@@ -32,11 +32,11 @@ class User extends CI_Controller
             $this->session->set_userdata($ses_data);
 
             $this->template->load('home','user/v_user', $data);
-        // }
-        // else
-        // {
-        //     $this->load->view("Login");
-        // }
+        }
+        else
+        {
+            $this->load->view("Login");
+        }
         //$this->load->view('user/v_user',$data);
     }
 

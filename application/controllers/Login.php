@@ -16,7 +16,13 @@ class Login extends CI_Controller {
 	
 
 	public function index(){	
+
+
+		
 		$cek = $this->session->userdata('logged_in');
+		$cek123 = $this->session->userdata('logged_in_admin');
+		
+
 		$status_user=$this->session->userdata('status_user');
 
 		if(empty($cek)){
@@ -24,7 +30,7 @@ class Login extends CI_Controller {
 		}else{
 			switch ($status_user) {
                 case '0' : redirect('Dashboard/super_admin'); break;
-                case '1' : redirect('Dashboard/admin'); break;
+                case '1' : redirect('Dashboard'); break;
                 case '2' : redirect('App'); break;
                 //default : redirect('Aspp'); break;
             }
@@ -55,8 +61,13 @@ class Login extends CI_Controller {
 				'id_user' 		=> $cek["data"]->id_user,
 				'status_user' 	=> $cek["data"]->status_user,
 				'logged_in' 	=> true,
+				'logged_in_admin' 	=> true,
 				'id_outlet' 	=> $cek["data"]->id_outlet
 			);
+
+			// print_r($ses_data);
+
+			// die;
 
 			$this->session->set_userdata($ses_data);
 			date_default_timezone_set('Asia/Jakarta');

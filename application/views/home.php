@@ -135,23 +135,23 @@ $this->load->view('nama_bulan');
 
                 date_default_timezone_set('Asia/Jakarta');
 
-                $cek=$this->session->userdata('logged_in_bpjt');
+                $cek=$this->session->userdata('logged_in_admin');
 
-                    // if(!empty($cek))
+                     if(!empty($cek))
 
-                    // {
+                     {
 
                         echo $contents;
 
-                    // }
+                     }
 
-                    // else
+                     else
 
-                    // {
+                     {
 
-                    //     redirect('Login/login');
+                         redirect('Login');
 
-                    // }
+                     }
 
 
 
